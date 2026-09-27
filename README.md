@@ -7,24 +7,34 @@ This repository contains the mathematical formulation, control design, and MATLA
 
 This project validates the capability of the VSC to inject into or absorb power from a stiff $90\text{ kV}$ (peak), $50\text{ Hz}$ AC grid through an inductive $R-L$ filter, ensuring high-quality, sinusoidal grid currents.
 
+## 🎯 Problem Statement (Project Requirements)
+The objective of this project is to model, simulate, and analyze a grid-connected **Two-Level VSC**. The converter is interfaced with a stiff $90\text{ kV}$ (peak), $50\text{ Hz}$ AC grid via a coupling inductor ($R-L$ branch).
+
+The specific requirements are to implement a **Hysteresis Current Controller** directly in the $abc$ reference frame to achieve independent regulation of active and reactive power, and to evaluate the system's stability and dynamic response across five specific operational cases:
+1.  **Pure Active Power Injection:** $P = +405\text{ MW}, Q = 0\text{ MVAR}$.
+2.  **Symmetrical Power Injection:** $P = +200\text{ MW}, Q = +200\text{ MVAR}$.
+3.  **STATCOM Operation:** $P = 0\text{ MW}, Q = +405\text{ MVAR}$.
+4.  **Rectification Mode:** $P = -405\text{ MW}, Q = 0\text{ MVAR}$.
+5.  **Dynamic Step Change:** Instantaneous power reversal from $+405\text{ MW}$ to $-405\text{ MW}$ at $t = 0.05\text{ s}$.
+
 ## 🧠 Control Strategy
-The control architecture avoids complex $dq0$ coordinate transformations and inner PI loop tuning by employing a robust, non-linear **Hysteresis Current Controller** operating directly in the $abc$ reference frame.
+The control architecture avoids complex $dq0$ coordinate transformations and inner PI loop tuning by employing a robust, non-linear **Hysteresis Current Controller**.
 
 1. **Analytical Reference Generation:** A custom MATLAB function continuously generates instantaneous synchronized 3-phase reference currents ($I_{abc}^*$) based on the targeted active/reactive power and the calculated power factor angle ($\phi = \tan^{-1}(Q/P)$).
 2. **Hysteresis Switching Logic:** The actual grid currents are bounded within a predefined tolerance band ($\pm \Delta i$) using Relay blocks. The logic generates complementary PWM gate signals for the upper and lower IGBTs to force the current to track the sinusoidal reference with excellent dynamic response.
 
 ## ⚙️ Operational Cases & Performance Analysis
-The system was subjected to five distinct operational scenarios to thoroughly evaluate its steady-state precision and transient resilience:
+The system successfully met all project requirements during the steady-state and transient scenarios:
 
-*   **Case 1: Pure Active Power Injection ($+405\text{ MW}, 0\text{ MVAR}$)**
+*   **Case 1: Pure Active Power Injection**
     *   Operating at unity power factor. Grid currents perfectly in-phase with grid voltages.
-*   **Case 2: Symmetrical Power Injection ($+200\text{ MW}, +200\text{ MVAR}$)**
+*   **Case 2: Symmetrical Power Injection**
     *   Demonstrates the VSC's dual capability as a power source and reactive compensator (power factor angle $= 45^\circ$).
-*   **Case 3: STATCOM Mode ($0\text{ MW}, +405\text{ MVAR}$)**
+*   **Case 3: STATCOM Mode**
     *   Zero active power transfer with maximum reactive power injection for dynamic voltage regulation. Currents shifted exactly $90^\circ$.
-*   **Case 4: Rectification Mode ($-405\text{ MW}, 0\text{ MVAR}$)**
+*   **Case 4: Rectification Mode**
     *   Validates bidirectional power flow. The converter draws active power from the AC grid, evidenced by a $180^\circ$ phase shift in the grid currents.
-*   **Case 5: Severe Dynamic Step Change ($+405\text{ MW} \rightarrow -405\text{ MW}$)**
+*   **Case 5: Severe Dynamic Step Change**
     *   A severe transient applied at $t = 0.05\text{ s}$ commands an instantaneous reversal of active power. The hysteresis controller achieves sub-cycle recovery with negligible overshoot in the reactive power profile, proving decoupled $P-Q$ regulation.
 
 ### 📊 Dynamic Response Highlight (Case 5)
