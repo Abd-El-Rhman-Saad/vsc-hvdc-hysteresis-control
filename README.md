@@ -1,6 +1,6 @@
 # Grid-Connected Two-Level VSC for HVDC: Hysteresis Current Control
 
-![VSC System Architecture](Docs/LaTeX_Source/Full_Sys.jpg)
+![VSC System Architecture](Docs/LaTeX_Source/images/Full_Sys.jpg)
 
 ![MATLAB/Simulink](https://img.shields.io/badge/MATLAB-Simulink-blue?logo=mathworks)
 ![Domain](https://img.shields.io/badge/Domain-HVDC_%26_VSC-red)
@@ -34,7 +34,7 @@ No dq0 transformation or inner PI tuning is needed; a non-linear hysteresis cont
 ### Dynamic response (Case 5)
 | Active & Reactive Power Reversal | Grid Current 180° Phase Shift |
 | :---: | :---: |
-| ![P and Q](Docs/LaTeX_Source/Grid%20active%20and%20reactive%20powers_5.png) | ![Currents](Docs/LaTeX_Source/Grid%20Currents_5.png) |
+| ![P and Q](Docs/LaTeX_Source/images/Grid%20active%20and%20reactive%20powers_5.png) | ![Currents](Docs/LaTeX_Source/images/Grid%20Currents_5.png) |
 
 ## 📂 Repository Structure
 * `Simulation/vsc-hvdc-hysteresis-control.slx` — Simulink model: VSC, split-capacitor DC link and hysteresis controller.
