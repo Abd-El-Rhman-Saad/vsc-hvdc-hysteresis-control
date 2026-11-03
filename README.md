@@ -1,11 +1,20 @@
 # Grid-Connected Two-Level VSC for HVDC Transmission: Hysteresis Current Control & Four-Quadrant P-Q Decoupled Regulation
 
-[![MATLAB](https://img.shields.io/badge/MATLAB-R2023b%2B-blue.svg?logo=mathworks&logoColor=white)](https://www.mathworks.com/products/matlab.html)
-[![Simulink](https://img.shields.io/badge/Simulink-Simscape%20Electrical-orange.svg?logo=mathworks&logoColor=white)](https://www.mathworks.com/products/simscape-electrical.html)
-[![Domain](https://img.shields.io/badge/Domain-HVDC%20%26%20Power%20Electronics-darkred.svg)](https://en.wikipedia.org/wiki/High-voltage_direct_current)
-[![Control](https://img.shields.io/badge/Control-Hysteresis%20Current%20Control-darkgreen.svg)](https://en.wikipedia.org/wiki/Hysteresis)
-[![Architecture](https://img.shields.io/badge/Architecture-Two--Level%20VSC-purple.svg)](https://en.wikipedia.org/wiki/Voltage-source_converter)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <img src="https://img.shields.io/badge/MATLAB-R2023b%2B-blue?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB" />
+  <img src="https://img.shields.io/badge/Simulink-Simscape%20Electrical-orange?style=for-the-badge&logo=mathworks&logoColor=white" alt="Simulink" />
+  <img src="https://img.shields.io/badge/Domain-HVDC%20%26%20Power%20Electronics-darkred?style=for-the-badge" alt="HVDC" />
+  <img src="https://img.shields.io/badge/Control-Hysteresis%20Current%20Control-darkgreen?style=for-the-badge" alt="Hysteresis" />
+  <img src="https://img.shields.io/badge/Architecture-Two--Level%20VSC-purple?style=for-the-badge" alt="Two-Level VSC" />
+  <img src="https://img.shields.io/badge/Institution-Alexandria%20University-003366?style=for-the-badge" alt="Alexandria University" />
+</p>
+
+> **Project Engineer:** Abd El-Rhman Muhammad Saad (ID: 19017058)  
+> **Academic Institution:** Faculty of Engineering, Alexandria University (Class of 2026)  
+> **Course & Specialization:** High-Voltage Direct Current (HVDC) Transmission Systems — Electrical Engineering Department (Power & Machines)  
+> **Academic Supervisor:** Prof. Dr. Ahmed Abbas El-Serougi  
+> **Project Title:** *Grid-Connected Two-Level VSC for HVDC: Non-Linear Stationary abc-Frame Hysteresis Current Control & Four-Quadrant P-Q Decoupling*  
+> **Simulink Model:** [vsc-hvdc-hysteresis-control on GitHub](https://github.com/Abd-El-Rhman-Saad/vsc-hvdc-hysteresis-control)
 
 ---
 
